@@ -1,0 +1,7 @@
+export const education = [
+  { id: 1, level: 'Matriculation', institution: 'D.A.V. Public School', board: 'CBSE', specialization: null, location: 'Malighat, Muzaffarpur, Bihar', startDate: 'April 2018', endDate: 'March 2019', description: 'Completed secondary education under the Central Board of Secondary Education.' },
+  { id: 2, level: 'Intermediate', institution: 'Holy Cross Public School', board: 'CBSE', specialization: 'PCM — Physics, Chemistry and Mathematics', location: 'Manika, Muzaffarpur, Bihar', startDate: 'April 2019', endDate: 'March 2021', description: 'Completed higher-secondary education with Physics, Chemistry and Mathematics as the core subjects.' },
+  { id: 3, level: 'Bachelor of Technology in Information Technology', institution: 'Lovely Professional University', board: null, specialization: 'Information Technology', location: 'Jalandhar, Punjab', startDate: 'August 2021', endDate: 'September 2025', focusAreas: ['Full-Stack Development', 'Android Development'], subjects: [{ short: 'DSA', label: 'Data Structures and Algorithms' }, { short: 'OOP', label: 'Object-Oriented Programming' }, { short: 'DBMS', label: 'Database Management Systems' }, { short: 'Computer Networks', label: 'Computer Networks' }, { short: 'Software Engineering', label: 'Software Engineering' }, { short: 'Operating Systems', label: 'Operating Systems' }], description: 'Developed a strong foundation in software engineering with practical exposure to full-stack and Android application development.' },
+]
+
+export default education

@@ -1,0 +1,5 @@
+# Replace REPLACE_WITH_CANONICAL_DOMAIN before deployment.
+User-agent: *
+Allow: /
+
+Sitemap: https://REPLACE_WITH_CANONICAL_DOMAIN/sitemap.xml
