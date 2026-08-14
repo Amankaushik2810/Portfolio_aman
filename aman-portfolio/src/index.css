@@ -1518,3 +1518,108 @@ a.contact-detail:hover p { color: #22D3EE; }
   .hero-orbit { width: 76%; }
   .background-grid { display: none; }
 }
+
+/* Ask Aman: a self-contained floating portfolio guide. */
+.ask-aman { position: fixed; z-index: 70; right: 1.25rem; bottom: 5rem; }
+
+.ask-aman-button {
+  position: relative;
+  display: inline-flex;
+  min-height: 3.45rem;
+  align-items: center;
+  gap: 0.62rem;
+  overflow: hidden;
+  border: 1px solid rgb(34 211 238 / 40%);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgb(17 24 39 / 96%), rgb(13 18 32 / 96%));
+  box-shadow: 0 14px 32px rgb(0 0 0 / 28%), 0 0 2.3rem rgb(34 211 238 / 13%);
+  padding: 0.45rem 0.85rem 0.45rem 0.5rem;
+  color: #F8FAFC;
+  cursor: pointer;
+  isolation: isolate;
+  transition: transform 180ms var(--ease-out-expo), border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.ask-aman-button::before { position: absolute; z-index: -1; inset: 1px; border-radius: calc(1rem - 1px); background: linear-gradient(110deg, rgb(59 130 246 / 15%), transparent 45%, rgb(139 92 246 / 14%)); content: ''; opacity: .8; }
+.ask-aman-button:hover { border-color: rgb(34 211 238 / 68%); box-shadow: 0 18px 38px rgb(0 0 0 / 34%), 0 0 2.8rem rgb(34 211 238 / 19%); transform: translateY(-2px); }
+.ask-aman-button:active { transform: translateY(0) scale(.98); }
+.ask-aman-button-open { border-color: rgb(255 255 255 / 20%); }
+.ask-aman-button-icon { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border-radius: .75rem; background: linear-gradient(145deg, #3B82F6, #6366F1); box-shadow: 0 7px 16px rgb(59 130 246 / 26%); color: white; }
+.ask-aman-button-icon svg { width: 1.15rem; height: 1.15rem; }
+.ask-aman-button-label { font-family: var(--font-heading); font-size: .83rem; font-weight: 700; letter-spacing: -.025em; white-space: nowrap; }
+.ask-aman-button-ping { position: absolute; top: .35rem; right: .35rem; width: .45rem; height: .45rem; border: 2px solid #0D1220; border-radius: 50%; background: #22D3EE; box-shadow: 0 0 0 3px rgb(34 211 238 / 13%); }
+
+.ask-aman-backdrop { position: fixed; z-index: 71; inset: 0; pointer-events: none; }
+.ask-aman-window {
+  position: absolute;
+  right: 0;
+  bottom: 4.35rem;
+  display: grid;
+  width: min(25.5rem, calc(100vw - 2rem));
+  max-height: min(40rem, calc(100dvh - 7rem));
+  grid-template-rows: auto minmax(0, 1fr) auto auto;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 13%);
+  border-radius: 1.35rem;
+  background: linear-gradient(155deg, rgb(17 24 39 / 98%), rgb(8 11 20 / 98%));
+  box-shadow: 0 28px 70px rgb(0 0 0 / 42%), 0 0 5rem rgb(59 130 246 / 11%);
+  opacity: 0;
+  pointer-events: auto;
+  transform: translateY(.7rem) scale(.975);
+  transform-origin: bottom right;
+  transition: transform 220ms var(--ease-out-expo), opacity 180ms ease;
+}
+.ask-aman-window::before { position: absolute; top: -7rem; right: -6rem; width: 16rem; height: 16rem; border-radius: 50%; background: radial-gradient(circle, rgb(59 130 246 / 17%), transparent 68%); content: ''; pointer-events: none; }
+.ask-aman-window-open { opacity: 1; transform: translateY(0) scale(1); }
+
+.ask-aman-header { position: relative; z-index: 1; display: flex; min-height: 4.65rem; align-items: center; gap: .72rem; border-bottom: 1px solid rgb(255 255 255 / 8%); background: rgb(13 18 32 / 74%); padding: .85rem 1rem; backdrop-filter: blur(14px); }
+.ask-aman-avatar, .ask-aman-message-avatar { display: grid; flex: 0 0 auto; place-items: center; border: 1px solid rgb(34 211 238 / 34%); border-radius: .8rem; background: linear-gradient(145deg, rgb(34 211 238 / 16%), rgb(59 130 246 / 20%)); color: #CFFAFE; font-family: var(--font-heading); font-size: .85rem; font-weight: 800; }
+.ask-aman-avatar { width: 2.45rem; height: 2.45rem; box-shadow: 0 0 1.4rem rgb(34 211 238 / 12%); }
+.ask-aman-avatar span { color: #22D3EE; }
+.ask-aman-status { display: flex; align-items: center; gap: .35rem; margin-top: .16rem; color: #A7B0C0; font-size: .67rem; font-weight: 600; line-height: 1.3; }
+.ask-aman-status i { width: .42rem; height: .42rem; border-radius: 50%; background: #22D3EE; box-shadow: 0 0 0 3px rgb(34 211 238 / 9%); }
+.ask-aman-status span { color: #718096; }
+.ask-aman-icon-button { display: grid; width: 2.35rem; height: 2.35rem; margin-left: auto; place-items: center; border: 1px solid rgb(255 255 255 / 9%); border-radius: .72rem; background: rgb(255 255 255 / 4%); color: #A7B0C0; transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease; }
+.ask-aman-icon-button svg { width: 1.05rem; height: 1.05rem; }
+.ask-aman-icon-button:hover { border-color: rgb(34 211 238 / 35%); background: rgb(34 211 238 / 8%); color: #CFFAFE; transform: translateY(-1px); }
+
+.ask-aman-conversation { position: relative; z-index: 1; display: flex; min-height: 12rem; flex-direction: column; gap: 1rem; overflow-y: auto; overscroll-behavior: contain; padding: 1rem; scrollbar-width: thin; scrollbar-color: rgb(59 130 246 / 65%) transparent; }
+.ask-aman-message { display: flex; max-width: 94%; align-items: flex-end; gap: .52rem; animation: ask-aman-message-in 260ms var(--ease-out-expo) both; }
+.ask-aman-message-visitor { align-self: flex-end; max-width: 86%; }
+.ask-aman-message-avatar { width: 1.55rem; height: 1.55rem; border-radius: .55rem; font-size: .61rem; }
+.ask-aman-message-name { margin-bottom: .32rem; color: #7DD3FC; font-size: .66rem; font-weight: 700; letter-spacing: .02em; }
+.ask-aman-message-bubble { border: 1px solid rgb(255 255 255 / 8%); border-radius: .9rem .9rem .9rem .25rem; background: rgb(13 18 32 / 83%); padding: .72rem .8rem; color: #D7E1EE; font-size: .8rem; line-height: 1.58; }
+.ask-aman-message-visitor .ask-aman-message-bubble { border-color: rgb(59 130 246 / 36%); border-radius: .9rem .9rem .25rem .9rem; background: linear-gradient(135deg, rgb(37 99 235 / 95%), rgb(79 70 229 / 88%)); color: #F8FAFC; box-shadow: 0 8px 18px rgb(37 99 235 / 15%); }
+.ask-aman-sources { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .42rem; }
+.ask-aman-source { display: inline-flex; max-width: 100%; align-items: center; gap: .32rem; overflow: hidden; border: 1px solid rgb(34 211 238 / 19%); border-radius: 999px; background: rgb(34 211 238 / 6%); padding: .27rem .48rem; color: #A5F3FC; font-size: .61rem; font-weight: 700; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+.ask-aman-source i { width: .3rem; height: .3rem; border-radius: 50%; background: #22D3EE; }
+
+.ask-aman-typing { display: flex; align-items: center; gap: .52rem; animation: ask-aman-message-in 220ms var(--ease-out-expo) both; }
+.ask-aman-typing-dots { display: inline-flex; align-items: center; gap: .25rem; border: 1px solid rgb(255 255 255 / 8%); border-radius: .85rem .85rem .85rem .25rem; background: rgb(13 18 32 / 83%); padding: .72rem .8rem; }
+.ask-aman-typing-dots i { width: .32rem; height: .32rem; border-radius: 50%; background: #7DD3FC; animation: ask-aman-dot 900ms ease-in-out infinite; }
+.ask-aman-typing-dots i:nth-child(2) { animation-delay: 120ms; }.ask-aman-typing-dots i:nth-child(3) { animation-delay: 240ms; }
+.ask-aman-notice { display: flex; align-items: flex-start; gap: .6rem; border: 1px solid rgb(251 191 36 / 25%); border-radius: .85rem; background: rgb(251 191 36 / 7%); padding: .7rem; color: #FDE68A; font-size: .73rem; line-height: 1.45; animation: ask-aman-message-in 220ms var(--ease-out-expo) both; }
+.ask-aman-notice-error, .ask-aman-notice-unavailable, .ask-aman-notice-offline, .ask-aman-notice-server { border-color: rgb(251 113 133 / 27%); background: rgb(251 113 133 / 7%); color: #FECDD3; }
+.ask-aman-notice > span { display: grid; width: 1rem; height: 1rem; flex: 0 0 auto; place-items: center; border-radius: 50%; background: currentColor; color: #0D1220; font-size: .65rem; font-weight: 900; }.ask-aman-notice p { flex: 1; }.ask-aman-notice button { border-bottom: 1px solid currentColor; color: inherit; font-size: .68rem; font-weight: 800; line-height: 1.2; }
+
+.ask-aman-suggestions { position: relative; z-index: 1; border-top: 1px solid rgb(255 255 255 / 7%); padding: .72rem 1rem .8rem; }
+.ask-aman-suggestions > p { margin-bottom: .48rem; color: #718096; font-size: .62rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }.ask-aman-suggestions > div { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .1rem; }.ask-aman-chip { flex: 0 0 auto; border: 1px solid rgb(255 255 255 / 10%); border-radius: 999px; background: rgb(255 255 255 / 4%); padding: .4rem .58rem; color: #C4D1E1; font-size: .66rem; font-weight: 650; line-height: 1.3; transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease; }.ask-aman-chip:hover:not(:disabled) { border-color: rgb(34 211 238 / 34%); background: rgb(34 211 238 / 8%); color: #CFFAFE; transform: translateY(-1px); }.ask-aman-chip:disabled { cursor: not-allowed; opacity: .5; }
+
+.ask-aman-composer { position: relative; z-index: 1; border-top: 1px solid rgb(255 255 255 / 8%); background: rgb(8 11 20 / 60%); padding: .75rem 1rem max(.9rem, env(safe-area-inset-bottom)); }.ask-aman-composer textarea { display: block; width: 100%; min-height: 2.7rem; max-height: 6rem; resize: vertical; border: 1px solid rgb(255 255 255 / 11%); border-radius: .85rem; outline: none; background: rgb(17 24 39 / 80%); padding: .66rem .72rem; color: #F8FAFC; font-family: var(--font-body); font-size: .78rem; line-height: 1.45; transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease; }.ask-aman-composer textarea::placeholder { color: #718096; }.ask-aman-composer textarea:focus { border-color: rgb(34 211 238 / 58%); background: #111827; box-shadow: 0 0 0 3px rgb(34 211 238 / 9%); }.ask-aman-composer textarea:disabled { cursor: wait; opacity: .62; }.ask-aman-composer-footer { display: flex; align-items: center; justify-content: space-between; margin-top: .5rem; }.ask-aman-counter { color: #718096; font-size: .63rem; font-weight: 700; }.ask-aman-counter-warning { color: #FBBF24; }.ask-aman-send { display: inline-flex; min-height: 2.1rem; align-items: center; gap: .38rem; border-radius: .65rem; background: #3B82F6; padding: .42rem .6rem; color: #F8FAFC; font-size: .7rem; font-weight: 800; transition: transform 180ms var(--ease-out-expo), background-color 180ms ease, opacity 180ms ease; }.ask-aman-send svg { width: .85rem; height: .85rem; }.ask-aman-send:hover:not(:disabled) { background: #2563EB; transform: translateY(-1px); }.ask-aman-send:disabled { cursor: not-allowed; opacity: .45; }
+
+@keyframes ask-aman-message-in { from { opacity: 0; transform: translateY(.38rem); } to { opacity: 1; transform: translateY(0); } }
+@keyframes ask-aman-dot { 0%, 70%, 100% { opacity: .42; transform: translateY(0); } 35% { opacity: 1; transform: translateY(-.2rem); } }
+
+@media (max-width: 639px) {
+  .ask-aman { right: max(1rem, env(safe-area-inset-right)); bottom: calc(max(1rem, env(safe-area-inset-bottom)) + 3.85rem); }
+  .ask-aman-button { min-height: 3.25rem; }.ask-aman-button-label { font-size: .78rem; }.ask-aman-button-icon { width: 2.25rem; height: 2.25rem; }
+  .ask-aman-backdrop { display: flex; align-items: flex-end; background: rgb(2 6 16 / 52%); opacity: 0; pointer-events: none; transition: opacity 180ms ease; }.ask-aman-backdrop-open { opacity: 1; pointer-events: auto; }
+  .ask-aman-window { position: relative; right: auto; bottom: auto; width: 100%; max-height: min(44rem, calc(100dvh - .75rem)); min-height: min(31rem, calc(100dvh - .75rem)); border-right: 0; border-bottom: 0; border-left: 0; border-radius: 1.35rem 1.35rem 0 0; transform: translateY(1rem); transform-origin: bottom center; }.ask-aman-window-open { transform: translateY(0); }
+  .ask-aman-conversation { min-height: 0; }.ask-aman-message { max-width: 96%; }.ask-aman-message-visitor { max-width: 89%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ask-aman-button, .ask-aman-window, .ask-aman-message, .ask-aman-typing, .ask-aman-notice, .ask-aman-chip, .ask-aman-icon-button, .ask-aman-send { transition: none; animation: none; }
+  .ask-aman-button:hover, .ask-aman-icon-button:hover, .ask-aman-chip:hover:not(:disabled), .ask-aman-send:hover:not(:disabled) { transform: none; }
+  .ask-aman-typing-dots i { animation: none; }
+}

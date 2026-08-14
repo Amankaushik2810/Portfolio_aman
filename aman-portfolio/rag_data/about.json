@@ -1,0 +1,50 @@
+[
+  {
+    "id": "about-profile",
+    "category": "about",
+    "title": "Aman Kaushik's engineering focus",
+    "content": "Aman Kaushik is an AI/ML and full-stack engineer whose work combines AI/ML, full-stack development, and Android engineering. He is especially interested in practical applications built with Python, retrieval-augmented generation (RAG), large language models, and modern user interfaces.",
+    "keywords": ["Aman Kaushik", "AI/ML engineer", "full-stack engineer", "Android engineering", "Python", "RAG", "LLMs"],
+    "source_section": "about"
+  },
+  {
+    "id": "about-current-location",
+    "category": "about",
+    "title": "Current location",
+    "content": "Aman Kaushik is based in Bangalore, India.",
+    "keywords": ["Bangalore", "India", "based in Bangalore", "location"],
+    "source_section": "about"
+  },
+  {
+    "id": "about-hometown",
+    "category": "about",
+    "title": "Hometown",
+    "content": "Aman Kaushik is from Muzaffarpur, Bihar.",
+    "keywords": ["Muzaffarpur", "Bihar", "hometown", "where is Aman from"],
+    "source_section": "about"
+  },
+  {
+    "id": "about-opportunities",
+    "category": "about",
+    "title": "Professional opportunities",
+    "content": "Aman Kaushik is available for AI/ML, Python, and full-stack opportunities and is open to relevant engineering opportunities.",
+    "keywords": ["available", "opportunities", "AI/ML", "Python", "full-stack", "hiring"],
+    "source_section": "about"
+  },
+  {
+    "id": "about-working-approach",
+    "category": "about",
+    "title": "Working approach",
+    "content": "Aman describes his approach as transforming ideas into working products through AI-first problem solving, complete product development, web and Android experience, and continuous learning and adaptability. His workflow is presented as Ideas, Context, Intelligence, and Experience.",
+    "keywords": ["working approach", "AI-first problem solving", "product development", "workflow", "Ideas Context Intelligence Experience"],
+    "source_section": "about"
+  },
+  {
+    "id": "about-beyond-code",
+    "category": "about",
+    "title": "Interest in poetry and technology",
+    "content": "Beyond engineering, Aman created Poetic Pebbles to provide a thoughtful publishing and sharing experience for poetry lovers. He describes the project as bringing together poetry, technology, and scale.",
+    "keywords": ["Poetic Pebbles", "poetry", "creative work", "technology", "publishing"],
+    "source_section": "about"
+  }
+]

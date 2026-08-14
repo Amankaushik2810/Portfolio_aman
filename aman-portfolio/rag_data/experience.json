@@ -1,0 +1,26 @@
+[
+  {
+    "id": "experience-globallogic-role",
+    "category": "experience",
+    "title": "Trainee Software Engineer at GlobalLogic",
+    "content": "Aman has been a Trainee Software Engineer at GlobalLogic India Private Limited, a Hitachi Group company, in Bengaluru, Karnataka, India, since January 2026. This is his current role and is focused on AI/ML-oriented software engineering.",
+    "keywords": ["GlobalLogic", "Trainee Software Engineer", "Hitachi Group", "Bengaluru", "January 2026", "current role", "AI/ML"],
+    "source_section": "experience"
+  },
+  {
+    "id": "experience-globallogic-responsibilities",
+    "category": "experience",
+    "title": "GlobalLogic responsibilities",
+    "content": "At GlobalLogic, Aman performs data cleaning, transformation, and exploratory data analysis using Python; builds, trains, and evaluates machine-learning models with scikit-learn and appropriate evaluation metrics; applies NLP and Transformer-based techniques to text-classification and language-focused use cases; and develops Generative AI and LLM workflows involving prompt engineering, embeddings, semantic retrieval, and RAG.",
+    "keywords": ["GlobalLogic responsibilities", "data cleaning", "exploratory data analysis", "scikit-learn", "NLP", "Transformers", "prompt engineering", "embeddings", "semantic retrieval", "RAG"],
+    "source_section": "experience"
+  },
+  {
+    "id": "experience-globallogic-skills",
+    "category": "experience",
+    "title": "GlobalLogic technologies and focus",
+    "content": "Aman's GlobalLogic role includes Python, Data Science, Machine Learning, scikit-learn, NLP, Transformers, Generative AI, LLMs, RAG, and Git. The role follows structured training in Data Science, Machine Learning, Generative AI, and Large Language Models.",
+    "keywords": ["GlobalLogic skills", "Python", "Data Science", "Machine Learning", "scikit-learn", "NLP", "Transformers", "Generative AI", "LLMs", "RAG", "Git"],
+    "source_section": "experience"
+  }
+]

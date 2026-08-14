@@ -1,0 +1,66 @@
+[
+  {
+    "id": "faq-what-does-aman-do",
+    "category": "faq",
+    "title": "What does Aman Kaushik do?",
+    "content": "Aman Kaushik is an AI/ML and full-stack engineer with Android engineering experience. His work focuses on practical applications involving Python, Generative AI, RAG, LLMs, and modern user interfaces.",
+    "keywords": ["what does Aman do", "role", "AI/ML", "full-stack", "Android", "Generative AI", "RAG"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-current-role",
+    "category": "faq",
+    "title": "What is Aman's current role?",
+    "content": "Aman is currently a Trainee Software Engineer at GlobalLogic India Private Limited in Bengaluru, Karnataka, India. The role began in January 2026 and focuses on AI/ML-oriented software engineering.",
+    "keywords": ["current role", "GlobalLogic", "Trainee Software Engineer", "job", "Bengaluru"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-availability",
+    "category": "faq",
+    "title": "Is Aman available for opportunities?",
+    "content": "Yes. Aman is available for AI/ML, Python, and full-stack opportunities and is open to relevant engineering opportunities.",
+    "keywords": ["available", "opportunities", "hiring", "AI/ML", "Python", "full-stack"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-location",
+    "category": "faq",
+    "title": "Where is Aman based?",
+    "content": "Aman is based in Bangalore, India, and is from Muzaffarpur, Bihar.",
+    "keywords": ["where is Aman based", "Bangalore", "India", "Muzaffarpur", "Bihar", "location"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-education",
+    "category": "faq",
+    "title": "What is Aman's education background?",
+    "content": "Aman earned a B.Tech in Information Technology from Lovely Professional University in Jalandhar, Punjab, completing it in September 2025. He also completed Intermediate education with PCM and Matriculation under the CBSE board.",
+    "keywords": ["education", "B.Tech", "Information Technology", "Lovely Professional University", "LPU", "CBSE", "PCM"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-rag-and-llms",
+    "category": "faq",
+    "title": "Does Aman work with RAG and LLMs?",
+    "content": "Yes. RAG and LLMs are included in Aman's applied AI skills, and his current role includes Generative AI and LLM workflows involving prompt engineering, embeddings, semantic retrieval, and RAG.",
+    "keywords": ["RAG", "LLMs", "retrieval-augmented generation", "Generative AI", "prompt engineering", "semantic retrieval"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-projects",
+    "category": "faq",
+    "title": "What projects has Aman built?",
+    "content": "The portfolio presents four projects: Poetic Pebbles, a published Android poetry-sharing application; HireSense AI, an AI recruitment analysis tool; Kaushik Footprints, a full-stack e-commerce application; and a Land Bidding Platform, a full-stack MERN property marketplace.",
+    "keywords": ["projects", "Poetic Pebbles", "HireSense AI", "Kaushik Footprints", "Land Bidding Platform", "portfolio"],
+    "source_section": "faq"
+  },
+  {
+    "id": "faq-contact",
+    "category": "faq",
+    "title": "How can I contact Aman?",
+    "content": "You can contact Aman by email at amankaushik2810@gmail.com, connect through LinkedIn, or explore his work on GitHub.",
+    "keywords": ["contact Aman", "email", "LinkedIn", "GitHub", "reach out"],
+    "source_section": "faq"
+  }
+]

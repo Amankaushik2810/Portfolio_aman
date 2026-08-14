@@ -1,0 +1,106 @@
+[
+  {
+    "id": "project-poetic-pebbles-overview",
+    "category": "projects",
+    "title": "Poetic Pebbles overview",
+    "content": "Poetic Pebbles is Aman's flagship published Android application. It is a poetry-sharing app that lets users write, publish, and explore poems while participating in a community through likes, comments, follows, profiles, and notifications. The app is available on Google Play.",
+    "keywords": ["Poetic Pebbles", "published Android application", "poetry-sharing app", "Google Play", "flagship project", "link", "app link", "download", "install", "Play Store", "Google Play", "Poetic Pebbles link"],
+    "source_section": "projects",
+    "links": [
+      {
+        "id": "poetic-pebbles-play-store",
+        "label": "Download on Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.tech.poeticpebbles",
+        "type": "play_store"
+      }
+    ]
+  },
+  {
+    "id": "project-poetic-pebbles-features",
+    "category": "projects",
+    "title": "Poetic Pebbles features",
+    "content": "Poetic Pebbles includes authentication, poem publishing, likes and comments, follow and unfollow actions, user profiles, notifications, and an admin approval workflow. AI Search and Assistant is listed as under development.",
+    "keywords": ["Poetic Pebbles features", "authentication", "poem publishing", "likes", "comments", "profiles", "notifications", "admin approval", "AI Search and Assistant"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-technologies",
+    "category": "projects",
+    "title": "Poetic Pebbles technologies",
+    "content": "Poetic Pebbles was built with Kotlin, XML, Firebase, and the Android SDK.",
+    "keywords": ["Poetic Pebbles technology", "Kotlin", "XML", "Firebase", "Android SDK"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-overview",
+    "category": "projects",
+    "title": "HireSense AI overview",
+    "content": "HireSense AI is an AI recruitment analysis tool. It analyses resumes and job descriptions to support candidate shortlisting, question generation, and retrieval workflows.",
+    "keywords": ["HireSense AI", "AI recruitment", "resume analysis", "job description analysis", "candidate shortlisting", "retrieval"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-features",
+    "category": "projects",
+    "title": "HireSense AI features",
+    "content": "HireSense AI supports resume and job-description analysis, candidate shortlisting, match scoring, Random Forest classification, technical and behavioural question generation, and RAG-based candidate retrieval.",
+    "keywords": ["HireSense AI features", "match score", "Random Forest", "technical questions", "behavioural questions", "RAG-based candidate retrieval"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-technologies",
+    "category": "projects",
+    "title": "HireSense AI technologies",
+    "content": "HireSense AI uses Python, Streamlit, scikit-learn, NLP, and Ollama.",
+    "keywords": ["HireSense AI technology", "Python", "Streamlit", "scikit-learn", "NLP", "Ollama"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-overview",
+    "category": "projects",
+    "title": "Kaushik Footprints overview",
+    "content": "Kaushik Footprints is a full-stack e-commerce application with customer shopping flows and administration tools for inventory management.",
+    "keywords": ["Kaushik Footprints", "e-commerce", "full-stack", "shopping", "inventory management"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-features",
+    "category": "projects",
+    "title": "Kaushik Footprints features",
+    "content": "Kaushik Footprints includes authentication, admin inventory management, product browsing, checkout, address management, and payment options.",
+    "keywords": ["Kaushik Footprints features", "authentication", "admin", "inventory", "product browsing", "checkout", "address management", "payment options"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-technologies",
+    "category": "projects",
+    "title": "Kaushik Footprints technologies",
+    "content": "Kaushik Footprints was built with React, Node.js, Express, and MongoDB.",
+    "keywords": ["Kaushik Footprints technology", "React", "Node.js", "Express", "MongoDB"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-land-bidding-platform-overview",
+    "category": "projects",
+    "title": "Land Bidding Platform overview",
+    "content": "The Land Bidding Platform is a full-stack MERN web application and property marketplace. It combines land listings, live bidding, chat, and account-management workflows.",
+    "keywords": ["Land Bidding Platform", "MERN", "property marketplace", "land listings", "live bidding", "chat"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-land-bidding-platform-features",
+    "category": "projects",
+    "title": "Land Bidding Platform features",
+    "content": "The Land Bidding Platform includes user authentication and authorization, an admin dashboard and property management, land and property listing and browsing, property details with images and pricing, real-time land bidding, live bid tracking and history, real-time buyer-seller chat, user profile and account management, search and filtering, and a secure bidding and transaction workflow.",
+    "keywords": ["Land Bidding Platform features", "authentication", "admin dashboard", "property management", "real-time bidding", "bid history", "real-time chat", "search and filter"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-land-bidding-platform-technologies",
+    "category": "projects",
+    "title": "Land Bidding Platform technologies",
+    "content": "The Land Bidding Platform was built with React, Node.js, Express.js, and MongoDB.",
+    "keywords": ["Land Bidding Platform technology", "React", "Node.js", "Express.js", "MongoDB"],
+    "source_section": "projects"
+  }
+]

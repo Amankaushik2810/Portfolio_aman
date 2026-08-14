@@ -1,0 +1,50 @@
+[
+  {
+    "id": "skills-applied-ai",
+    "category": "skills",
+    "title": "Applied AI skills",
+    "content": "Aman's applied AI toolkit includes Machine Learning, NLP, Generative AI, RAG, LLMs, LangChain, LangGraph, and Transformers.",
+    "keywords": ["Applied AI", "Machine Learning", "NLP", "Generative AI", "RAG", "LLMs", "LangChain", "LangGraph", "Transformers"],
+    "source_section": "skills"
+  },
+  {
+    "id": "skills-programming",
+    "category": "skills",
+    "title": "Programming languages",
+    "content": "Aman's programming languages are Python, JavaScript, Kotlin, C, and C++.",
+    "keywords": ["programming", "Python", "JavaScript", "Kotlin", "C", "C++"],
+    "source_section": "skills"
+  },
+  {
+    "id": "skills-web-engineering",
+    "category": "skills",
+    "title": "Web engineering skills",
+    "content": "Aman's web engineering skills include React, Node.js, Express, FastAPI, REST APIs, HTML, and CSS.",
+    "keywords": ["web engineering", "React", "Node.js", "Express", "FastAPI", "REST APIs", "HTML", "CSS"],
+    "source_section": "skills"
+  },
+  {
+    "id": "skills-data",
+    "category": "skills",
+    "title": "Data and database skills",
+    "content": "Aman's data-related skills include Pandas, NumPy, scikit-learn, FAISS, MySQL, PostgreSQL, MongoDB, and Firebase.",
+    "keywords": ["data", "Pandas", "NumPy", "scikit-learn", "FAISS", "MySQL", "PostgreSQL", "MongoDB", "Firebase"],
+    "source_section": "skills"
+  },
+  {
+    "id": "skills-mobile",
+    "category": "skills",
+    "title": "Mobile development skills",
+    "content": "Aman's mobile development skills include Android, Kotlin, XML, and Firebase.",
+    "keywords": ["mobile", "Android", "Kotlin", "XML", "Firebase"],
+    "source_section": "skills"
+  },
+  {
+    "id": "skills-engineering-tools",
+    "category": "skills",
+    "title": "Engineering tools",
+    "content": "Aman's engineering tools include Git, GitHub, and Docker.",
+    "keywords": ["engineering tools", "Git", "GitHub", "Docker"],
+    "source_section": "skills"
+  }
+]

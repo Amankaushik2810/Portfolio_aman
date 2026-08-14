@@ -1,0 +1,26 @@
+[
+  {
+    "id": "education-matriculation-dav-public-school",
+    "category": "education",
+    "title": "Matriculation at D.A.V. Public School",
+    "content": "Aman completed Matriculation at D.A.V. Public School in Malighat, Muzaffarpur, Bihar, under the CBSE board. This secondary education ran from April 2018 to March 2019.",
+    "keywords": ["Matriculation", "D.A.V. Public School", "CBSE", "Malighat", "Muzaffarpur", "April 2018", "March 2019"],
+    "source_section": "education"
+  },
+  {
+    "id": "education-intermediate-holy-cross-public-school",
+    "category": "education",
+    "title": "Intermediate at Holy Cross Public School",
+    "content": "Aman completed Intermediate education at Holy Cross Public School in Manika, Muzaffarpur, Bihar, under the CBSE board. He studied PCM: Physics, Chemistry, and Mathematics, from April 2019 to March 2021.",
+    "keywords": ["Intermediate", "Holy Cross Public School", "CBSE", "PCM", "Physics", "Chemistry", "Mathematics", "Manika", "Muzaffarpur"],
+    "source_section": "education"
+  },
+  {
+    "id": "education-btech-information-technology-lpu",
+    "category": "education",
+    "title": "B.Tech in Information Technology at Lovely Professional University",
+    "content": "Aman earned a Bachelor of Technology in Information Technology from Lovely Professional University in Jalandhar, Punjab, from August 2021 to September 2025. His education included practical exposure to full-stack and Android application development, with subjects including Data Structures and Algorithms, Object-Oriented Programming, Database Management Systems, Computer Networks, Software Engineering, and Operating Systems.",
+    "keywords": ["B.Tech", "Information Technology", "Lovely Professional University", "LPU", "Jalandhar", "August 2021", "September 2025", "full-stack development", "Android development"],
+    "source_section": "education"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "contact-email",
+    "category": "contact",
+    "title": "Email Aman",
+    "content": "Aman Kaushik can be contacted by email at amankaushik2810@gmail.com.",
+    "keywords": ["email", "contact", "amankaushik2810@gmail.com", "reach Aman"],
+    "source_section": "contact"
+  },
+  {
+    "id": "contact-linkedin",
+    "category": "contact",
+    "title": "Aman's LinkedIn profile",
+    "content": "Aman's public LinkedIn profile is https://www.linkedin.com/in/aman-kaushik-98664622b/.",
+    "keywords": ["LinkedIn", "professional profile", "Aman Kaushik LinkedIn", "connect"],
+    "source_section": "contact"
+  },
+  {
+    "id": "contact-github",
+    "category": "contact",
+    "title": "Aman's GitHub profile",
+    "content": "Aman's public GitHub profile is https://github.com/amankaushik2810.",
+    "keywords": ["GitHub", "projects", "source code", "amankaushik2810"],
+    "source_section": "contact"
+  }
+]

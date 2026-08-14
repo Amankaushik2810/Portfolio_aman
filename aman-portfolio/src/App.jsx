@@ -14,6 +14,7 @@ import Hero from './components/sections/Hero.jsx'
 import Projects from './components/sections/Projects.jsx'
 import SectionHeading from './components/sections/SectionHeading.jsx'
 import RevealOnScroll from './components/common/RevealOnScroll.jsx'
+import AskAman from './components/AskAman/AskAman.jsx'
 import { experiences } from './data/experience.js'
 import { education } from './data/education.js'
 import profile from './data/profile.js'
@@ -52,6 +53,7 @@ function App() {
       </main>
       <Footer />
       <BackToTop />
+      <AskAman />
     </div>
   )
 }
