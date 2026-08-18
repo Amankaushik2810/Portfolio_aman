@@ -33,7 +33,10 @@ class FrontendIntegrationTests(unittest.TestCase):
         self.assertEqual(function["includeFiles"], "rag_data/**")
         self.assertNotIn("builds", config)
         self.assertNotIn("routes", config)
-        self.assertNotIn("rewrites", config)
+        self.assertEqual(
+            config["rewrites"],
+            [{"source": "/api/(.*)", "destination": "/api/index.py"}],
+        )
 
     def test_chat_renders_backend_answer_and_source_badges_as_text(self):
         chat_message = (PROJECT_DIRECTORY / "src" / "components" / "AskAman" / "ChatMessage.jsx").read_text(encoding="utf-8")

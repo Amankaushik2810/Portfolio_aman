@@ -30,19 +30,23 @@ class VercelDeploymentTests(unittest.TestCase):
 
     def test_fastapi_app_and_health_route_are_discoverable(self):
         self.assertIsInstance(app, FastAPI)
-        route_paths = {route.path for route in app.routes}
-        self.assertIn("/api/health", route_paths)
-        self.assertIn("/api/ask", route_paths)
+        route_paths = [route.path for route in app.routes]
+        self.assertEqual(route_paths.count("/api/health"), 1)
+        self.assertEqual(route_paths.count("/api/ask"), 1)
 
-    def test_vercel_config_preserves_automatic_api_index_routing(self):
+    def test_vercel_config_rewrites_only_api_requests_to_fastapi(self):
         config = json.loads((PROJECT_DIRECTORY / "vercel.json").read_text(encoding="utf-8"))
         self.assertEqual(config["framework"], "vite")
         self.assertEqual(config["buildCommand"], "npm run build")
         self.assertEqual(config["outputDirectory"], "dist")
         self.assertIn("api/index.py", config["functions"])
+        self.assertEqual(config["functions"]["api/index.py"]["includeFiles"], "rag_data/**")
         self.assertNotIn("builds", config)
         self.assertNotIn("routes", config)
-        self.assertNotIn("rewrites", config)
+        self.assertEqual(
+            config["rewrites"],
+            [{"source": "/api/(.*)", "destination": "/api/index.py"}],
+        )
 
     def test_bundled_vector_index_is_available_and_complete(self):
         knowledge_base = load_knowledge_base()

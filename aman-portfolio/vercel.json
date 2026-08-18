@@ -10,6 +10,12 @@
       "excludeFiles": "{tests/**,public/**,src/**,node_modules/**,dist/**,**/__pycache__/**,**/*.pyc}"
     }
   },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.py"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
