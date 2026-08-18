@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import unittest
+import json
 from pathlib import Path
 
 
@@ -21,6 +22,16 @@ class FrontendIntegrationTests(unittest.TestCase):
         self.assertIn("'/api'", vite_config)
         self.assertIn("http://127.0.0.1:8000", vite_config)
         self.assertNotIn("rewrite:", vite_config)
+
+    def test_vercel_config_keeps_fastapi_and_spa_routes_separate(self):
+        config = json.loads((PROJECT_DIRECTORY / "vercel.json").read_text(encoding="utf-8"))
+        self.assertEqual(config["framework"], "vite")
+        self.assertEqual(config["buildCommand"], "npm run build")
+        self.assertEqual(config["outputDirectory"], "dist")
+        function = config["functions"]["api/index.py"]
+        self.assertEqual(function["maxDuration"], 30)
+        self.assertEqual(function["includeFiles"], "rag_data/**")
+        self.assertIn("((?!api/).*)", config["rewrites"][0]["source"])
 
     def test_chat_renders_backend_answer_and_source_badges_as_text(self):
         chat_message = (PROJECT_DIRECTORY / "src" / "components" / "AskAman" / "ChatMessage.jsx").read_text(encoding="utf-8")

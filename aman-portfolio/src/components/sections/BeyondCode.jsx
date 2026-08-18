@@ -9,7 +9,7 @@ function BeyondCode({ content }) {
       <Container>
         <div className="grid gap-8 lg:grid-cols-[1fr_0.92fr] lg:items-center lg:gap-16">
           <RevealOnScroll>
-            <SectionHeading eyebrow={content.eyebrow} title={content.heading} description={content.story} />
+            <SectionHeading eyebrow={content.eyebrow} title={content.heading} titleId="beyond-code-title" description={content.story} />
             <p className="beyond-code-pull-quote">{content.pullQuote}</p>
             <p className="beyond-code-tech-tag">{content.technologyLine}</p>
           </RevealOnScroll>

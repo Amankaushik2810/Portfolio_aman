@@ -58,7 +58,6 @@ const profile = {
     email: 'amankaushik2810@gmail.com',
     linkedInUrl: 'https://www.linkedin.com/in/aman-kaushik-98664622b/',
     githubUrl: 'https://github.com/amankaushik2810',
-    resumeUrl: 'REPLACE_WITH_RESUME_URL',
   },
 }
 

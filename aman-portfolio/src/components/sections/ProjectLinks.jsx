@@ -11,7 +11,7 @@ function ProjectLinks({ links, variant = 'card' }) {
     { label: variant === 'card' ? 'GitHub ↗' : 'View on GitHub ↗', href: links.github, github: true },
     links.liveDemo && { label: 'Live Demo', href: links.liveDemo },
     { label: 'Download on Google Play \u2197', href: links.playStore, playStore: true },
-  ].filter((link) => link && link.href && link.href !== 'NOT_APPLICABLE' && !link.href.startsWith('REPLACE_WITH'))
+  ].filter((link) => link && link.href && link.href !== 'NOT_APPLICABLE')
   if (variant === 'agri-card') linkItems.sort((left, right) => (left.playStore ? 0 : left.label.startsWith('Live') ? -1 : left.github ? 1 : 0) - (right.playStore ? 0 : right.label.startsWith('Live') ? -1 : right.github ? 1 : 0))
 
   if (linkItems.length === 0) return null

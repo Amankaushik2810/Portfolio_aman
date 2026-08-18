@@ -10,7 +10,7 @@ function About({ content, beyondCode }) {
       <Container>
         <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
           <RevealOnScroll>
-            <SectionHeading eyebrow={content.eyebrow} title={content.heading} description={content.copy} />
+            <SectionHeading eyebrow={content.eyebrow} title={content.heading} titleId="about-title" description={content.copy} />
             <blockquote className="about-pull-quote">{content.pullQuote}</blockquote>
           </RevealOnScroll>
 

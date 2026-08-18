@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import hashlib
-import os
 import time
 from collections import defaultdict, deque
 from threading import Lock
@@ -28,12 +27,12 @@ from api.models import (
     KnowledgeHealth,
 )
 from api.rag_service import InformationUnavailableError, RetrievalUnavailableError, get_rag_service
-from api.retriever import DEFAULT_RETRIEVER, DEFAULT_RETRIEVER_ERROR, RetrievalInitializationError
+from api.retriever import DEFAULT_RETRIEVER, RetrievalInitializationError
 
 
-app = FastAPI(title="Ask Aman API", version="0.1.0")
+app = FastAPI(title="Ask Aman API", version="0.1.0", docs_url=None, redoc_url=None, openapi_url=None)
 
-if os.getenv("VERCEL_ENV") != "production":
+if not settings.is_production:
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
@@ -77,7 +76,7 @@ class ShortWindowRateLimiter:
             self._entries.clear()
 
 
-rate_limiter = ShortWindowRateLimiter()
+rate_limiter = ShortWindowRateLimiter(settings.rate_limit, settings.rate_window_seconds)
 
 
 def _error_response(status_code: int, code: str, message: str) -> JSONResponse:
@@ -97,15 +96,31 @@ async def validation_error_handler(_request: Request, _error: RequestValidationE
 async def public_api_error_handler(_request: Request, error: PublicApiError) -> JSONResponse:
     return _error_response(error.status_code, error.code, error.message)
 
+
+@app.exception_handler(Exception)
+async def unexpected_error_handler(_request: Request, _error: Exception) -> JSONResponse:
+    return _error_response(500, "internal_error", "Ask Aman could not complete that request right now.")
+
+
+@app.middleware("http")
+async def limit_ask_aman_request_body(request: Request, call_next):
+    """Reject oversized Ask Aman bodies before JSON validation or provider access."""
+
+    if request.method == "POST" and request.url.path == "/api/ask":
+        content_length = request.headers.get("content-length")
+        if content_length and content_length.isdigit() and int(content_length) > settings.max_request_body_bytes:
+            return _error_response(413, "request_too_large", "Ask Aman requests are limited to a safe size.")
+        body = await request.body()
+        if len(body) > settings.max_request_body_bytes:
+            return _error_response(413, "request_too_large", "Ask Aman requests are limited to a safe size.")
+    return await call_next(request)
+
 knowledge_base: KnowledgeBase | None
-knowledge_load_error: str | None
 try:
     knowledge_base = load_knowledge_base()
-    knowledge_load_error = None
-except KnowledgeLoadError as error:
-    # Keep the function importable so /api/health can expose a safe diagnostic.
+except KnowledgeLoadError:
+    # Keep the function importable so /api/health can report degraded readiness.
     knowledge_base = None
-    knowledge_load_error = str(error)
 
 
 @app.get("/api/health", response_model=HealthResponse)
@@ -120,20 +135,16 @@ def health_check() -> HealthResponse:
             loaded=loaded,
             record_count=len(knowledge_base.records) if knowledge_base else 0,
             categories=knowledge_base.category_counts if knowledge_base else {},
-            error=knowledge_load_error,
         ),
         index=IndexHealth(
             loaded=index_loaded,
             record_count=DEFAULT_RETRIEVER.indexed_record_count if DEFAULT_RETRIEVER else 0,
             embedding_dimension=DEFAULT_RETRIEVER.embedding_dimension if DEFAULT_RETRIEVER else None,
-            error=str(DEFAULT_RETRIEVER_ERROR) if DEFAULT_RETRIEVER_ERROR else None,
         ),
         configuration=ConfigurationHealth(
             gemini_api_key_configured=settings.gemini_api_key_configured,
             generation_model_configured=settings.generation_model_configured,
             embedding_model_configured=settings.embedding_model_configured,
-            generation_model=settings.gemini_generation_model,
-            embedding_model=settings.gemini_embedding_model,
         ),
     )
 
@@ -143,6 +154,7 @@ def health_check() -> HealthResponse:
     response_model=AskAmanResponse,
     responses={
         404: {"model": ErrorResponse},
+        413: {"model": ErrorResponse},
         422: {"model": ErrorResponse},
         429: {"model": ErrorResponse},
         503: {"model": ErrorResponse},
@@ -172,6 +184,8 @@ def ask_aman(payload: AskAmanRequest, request: Request, response: Response) -> A
         raise PublicApiError(503, "gemini_temporarily_unavailable", str(error)) from error
     except GeminiServiceError as error:
         raise PublicApiError(503, "gemini_unavailable", str(error)) from error
+    except Exception as error:
+        raise PublicApiError(500, "internal_error", "Ask Aman could not complete that request right now.") from error
 
     response.headers["Cache-Control"] = "no-store"
     return answer

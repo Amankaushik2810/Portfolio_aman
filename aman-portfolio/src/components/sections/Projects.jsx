@@ -16,7 +16,7 @@ function Projects({ projects, profile }) {
     <section className="section-space" id="projects" aria-labelledby="projects-title">
       <Container>
         <RevealOnScroll>
-          <SectionHeading eyebrow="Selected work" title={`Products built by ${profile.name}.`} description="A selection of intelligent systems and product experiences across Android, web, and machine learning." />
+          <SectionHeading eyebrow="Selected work" title={`Products built by ${profile.name}.`} titleId="projects-title" description="A selection of intelligent systems and product experiences across Android, web, and machine learning." />
           <div className="project-filters" aria-label="Project filters">
             {filters.map((filter) => <button className={activeFilter === filter ? 'project-filter-active' : ''} type="button" aria-pressed={activeFilter === filter} key={filter} onClick={() => setActiveFilter(filter)}>{filter}</button>)}
           </div>

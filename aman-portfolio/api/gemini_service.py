@@ -14,7 +14,6 @@ from api.models import ConversationExchange
 # A normal grounded response can approach 12 seconds on a cold provider path.
 # Keep a finite limit while leaving enough headroom for the local Vite proxy and
 # Vercel function overhead.
-GENERATION_TIMEOUT_MS = 20_000
 MAX_OUTPUT_TOKENS = 250
 
 
@@ -70,7 +69,7 @@ class GeminiService:
         if self._client is None:
             self._client = genai.Client(
                 api_key=settings.gemini_api_key,
-                http_options=types.HttpOptions(timeout=GENERATION_TIMEOUT_MS),
+                http_options=types.HttpOptions(timeout=settings.gemini_timeout_seconds * 1_000),
             )
 
         history_text = _history_text(history)

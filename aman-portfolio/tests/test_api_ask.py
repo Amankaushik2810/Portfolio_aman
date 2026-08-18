@@ -61,6 +61,17 @@ class AskAmanEndpointTests(unittest.TestCase):
         self.assertEqual(response.headers["cache-control"], "no-store")
         self.assertEqual(response.json()["error"]["code"], "invalid_question")
 
+    def test_oversized_request_body_is_rejected_before_service_access(self):
+        api_index.get_rag_service = lambda: (_ for _ in ()).throw(AssertionError("Service must not be called"))
+        response = self.client.post(
+            "/api/ask",
+            content=b'{"question":"' + (b"x" * 20_000) + b'","history":[]}',
+            headers={"content-type": "application/json"},
+        )
+        self.assertEqual(response.status_code, 413)
+        self.assertEqual(response.headers["cache-control"], "no-store")
+        self.assertEqual(response.json()["error"]["code"], "request_too_large")
+
     def test_missing_index_has_friendly_error(self):
         api_index.get_rag_service = self._raise(RetrievalInitializationError("vectors.json missing"))
         response = self.client.post("/api/ask", json={"question": "Tell me about Aman.", "history": []})
@@ -95,6 +106,13 @@ class AskAmanEndpointTests(unittest.TestCase):
         api_index.get_rag_service = lambda: (_ for _ in ()).throw(AssertionError("Health must not access RAG"))
         health = self.client.get("/api/health")
         self.assertEqual(health.status_code, 200)
+
+    def test_unexpected_errors_are_generic(self):
+        api_index.get_rag_service = self._raise(RuntimeError("internal detail"))
+        response = self.client.post("/api/ask", json={"question": "Question?", "history": []})
+        self.assertEqual(response.status_code, 500)
+        self.assertEqual(response.json()["error"]["code"], "internal_error")
+        self.assertNotIn("internal detail", response.text)
 
 
 if __name__ == "__main__":

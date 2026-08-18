@@ -6,6 +6,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
+from api.config import settings
 from api.link_validation import public_link_error
 
 
@@ -57,7 +58,7 @@ class AskAmanRequest(BaseModel):
 
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
 
-    question: str = Field(min_length=1, max_length=300)
+    question: str = Field(min_length=1, max_length=settings.max_question_length)
     history: list["ConversationExchange"] = Field(default_factory=list, max_length=2)
 
 
@@ -101,22 +102,18 @@ class KnowledgeHealth(BaseModel):
     loaded: bool
     record_count: int
     categories: dict[str, int] = Field(default_factory=dict)
-    error: str | None = None
 
 
 class ConfigurationHealth(BaseModel):
     gemini_api_key_configured: bool
     generation_model_configured: bool
     embedding_model_configured: bool
-    generation_model: str
-    embedding_model: str
 
 
 class IndexHealth(BaseModel):
     loaded: bool
     record_count: int
     embedding_dimension: int | None = None
-    error: str | None = None
 
 
 class HealthResponse(BaseModel):

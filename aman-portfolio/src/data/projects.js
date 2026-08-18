@@ -1,7 +1,5 @@
 import poeticPebblesLogo from '../assets/projects/poetic-pebbles-logo.png'
 
-const caseStudyPlaceholder = 'Project case-study details are being prepared.'
-
 const poeticPebblesCaseStudy = {
   overview: 'Poetic Pebbles is a dedicated Android community for readers and writers of poetry. It combines a focused reading experience with moderated publishing, community interaction and administrative tools.',
   summary: [
@@ -94,7 +92,6 @@ const projects = [
     caseStudy: poeticPebblesCaseStudy,
     links: { github: null, liveDemo: null, playStore: 'https://play.google.com/store/apps/details?id=com.tech.poeticpebbles' },
     screenshots: [],
-    screenshotPlaceholder: 'REPLACE_WITH_POETIC_PEBBLES_SCREENSHOTS',
   },
   {
     id: 'hiresense-ai',
@@ -112,7 +109,6 @@ const projects = [
     },
     links: { github: 'https://github.com/Amankaushik2810/HireSense-AI', liveDemo: null, playStore: 'NOT_APPLICABLE' },
     screenshots: [],
-    screenshotPlaceholder: 'REPLACE_WITH_HIRESENSE_AI_SCREENSHOTS',
   },
   {
     id: 'kaushik-footprints',
@@ -130,7 +126,6 @@ const projects = [
     },
     links: { github: 'https://github.com/Amankaushik2810/Kaushik-s-Footprints', liveDemo: null, playStore: 'NOT_APPLICABLE' },
     screenshots: [],
-    screenshotPlaceholder: 'REPLACE_WITH_KAUSHIK_FOOTPRINTS_SCREENSHOTS',
   },
   {
     id: 'land-bidding-platform',
@@ -148,7 +143,6 @@ const projects = [
     },
     links: { github: 'https://github.com/Amankaushik2810/Agri-Products', playStore: 'NOT_APPLICABLE' },
     screenshots: [],
-    screenshotPlaceholder: 'REPLACE_WITH_LAND_BIDDING_PLATFORM_SCREENSHOTS',
   },
 ]
 

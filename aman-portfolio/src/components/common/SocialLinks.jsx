@@ -22,14 +22,8 @@ function SocialLinks({ contact }) {
   return (
     <div className="flex items-center gap-3" aria-label="Social links">
       {socialItems.map((item) => {
-        const isPlaceholder = item.value.startsWith('REPLACE_WITH')
         const href = item.type === 'email' ? `mailto:${item.value}` : item.value
-
-        if (isPlaceholder) {
-          return <span className="social-link social-link-disabled" key={item.type} aria-label={`${item.label} link placeholder`} title={`Add ${item.label} details in src/data/profile.js`}><SocialIcon type={item.type} /></span>
-        }
-
-        return <a className="social-link" href={href} key={item.type} target={item.type === 'email' ? undefined : '_blank'} rel={item.type === 'email' ? undefined : 'noreferrer'} aria-label={item.label}><SocialIcon type={item.type} /></a>
+        return <a className="social-link" href={href} key={item.type} target={item.type === 'email' ? undefined : '_blank'} rel={item.type === 'email' ? undefined : 'noopener noreferrer'} aria-label={item.label}><SocialIcon type={item.type} /></a>
       })}
     </div>
   )

@@ -11,6 +11,7 @@ function Experience({ experiences }) {
           <SectionHeading
             eyebrow="Professional Journey"
             title="Experience that shapes my engineering"
+            titleId="experience-title"
             description="Building intelligent software through hands-on experience with data, machine learning and Generative AI."
           />
         </RevealOnScroll>

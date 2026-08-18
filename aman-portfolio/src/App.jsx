@@ -36,7 +36,7 @@ function App() {
 
         <Container>
           <section className="section-space" id="skills" aria-labelledby="skills-title">
-            <SectionHeading eyebrow="Capabilities" title="A practical toolkit for intelligent products." description="Focused on building useful AI systems and shipping the interfaces around them." />
+            <SectionHeading eyebrow="Capabilities" title="A practical toolkit for intelligent products." titleId="skills-title" description="Focused on building useful AI systems and shipping the interfaces around them." />
             <RevealOnScroll className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" stagger>
               {skillCategories.map((category, index) => (
                 <article className="design-card skill-card p-6" key={category.id} style={{ '--stagger-index': index }}>

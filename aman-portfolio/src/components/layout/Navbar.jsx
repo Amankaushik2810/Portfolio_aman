@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import MobileMenu from './MobileMenu.jsx'
 
 const navigationItems = [
@@ -15,6 +15,12 @@ function Navbar() {
   const [activeSection, setActiveSection] = useState('home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const menuToggleRef = useRef(null)
+
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false)
+    window.requestAnimationFrame(() => menuToggleRef.current?.focus())
+  }
 
   useEffect(() => {
     let animationFrame = 0
@@ -60,7 +66,7 @@ function Navbar() {
           ))}
         </div>
 
-        <button className={`menu-toggle lg:hidden ${isMenuOpen ? 'menu-toggle-open' : ''}`} type="button" aria-expanded={isMenuOpen} aria-controls="mobile-navigation" aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => setIsMenuOpen((isOpen) => !isOpen)}>
+        <button className={`menu-toggle lg:hidden ${isMenuOpen ? 'menu-toggle-open' : ''}`} ref={menuToggleRef} type="button" aria-expanded={isMenuOpen} aria-controls="mobile-navigation" aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'} onClick={() => (isMenuOpen ? closeMobileMenu() : setIsMenuOpen(true))}>
           <span />
           <span />
           <span />
@@ -71,7 +77,7 @@ function Navbar() {
         activeSection={activeSection}
         isOpen={isMenuOpen}
         items={navigationItems}
-        onClose={() => setIsMenuOpen(false)}
+        onClose={closeMobileMenu}
       />
     </header>
   )
