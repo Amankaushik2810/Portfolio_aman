@@ -23,7 +23,7 @@ class FrontendIntegrationTests(unittest.TestCase):
         self.assertIn("http://127.0.0.1:8000", vite_config)
         self.assertNotIn("rewrite:", vite_config)
 
-    def test_vercel_config_keeps_fastapi_and_spa_routes_separate(self):
+    def test_vercel_config_keeps_fastapi_separate_from_static_output(self):
         config = json.loads((PROJECT_DIRECTORY / "vercel.json").read_text(encoding="utf-8"))
         self.assertEqual(config["framework"], "vite")
         self.assertEqual(config["buildCommand"], "npm run build")
@@ -31,7 +31,9 @@ class FrontendIntegrationTests(unittest.TestCase):
         function = config["functions"]["api/index.py"]
         self.assertEqual(function["maxDuration"], 30)
         self.assertEqual(function["includeFiles"], "rag_data/**")
-        self.assertIn("((?!api/).*)", config["rewrites"][0]["source"])
+        self.assertNotIn("builds", config)
+        self.assertNotIn("routes", config)
+        self.assertNotIn("rewrites", config)
 
     def test_chat_renders_backend_answer_and_source_badges_as_text(self):
         chat_message = (PROJECT_DIRECTORY / "src" / "components" / "AskAman" / "ChatMessage.jsx").read_text(encoding="utf-8")
