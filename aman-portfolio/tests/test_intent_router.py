@@ -64,10 +64,18 @@ class IntentRouterTests(unittest.TestCase):
         self.assertEqual(router.route("Share a biography.").primary_intent, "about")
 
     def test_project_link_requests_have_external_link_action(self):
-        result = self.router.route("Can you share me the link of Poetic Pebbles?")
-        self.assertEqual(result.primary_intent, "projects")
-        self.assertIn("external_link", result.actions)
-        self.assertIn("poetic pebbles", result.matched_terms)
+        cases = {
+            "Can you share me the link of Poetic Pebbles?": "poetic pebbles",
+            "Share the Poetic Pebbles link.": "poetic pebbles",
+            "Share the HireSense GitHub link.": "hiresense",
+            "Share the Agri-Products GitHub link.": "agri products",
+        }
+        for question, expected_term in cases.items():
+            with self.subTest(question=question):
+                result = self.router.route(question)
+                self.assertEqual(result.primary_intent, "projects")
+                self.assertIn("external_link", result.actions)
+                self.assertIn(expected_term, result.matched_terms)
 
 
 if __name__ == "__main__":

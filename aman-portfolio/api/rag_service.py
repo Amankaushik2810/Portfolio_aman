@@ -71,9 +71,36 @@ class RAGService:
             if record.category != "projects" or not record.links:
                 continue
             project_name = normalize_text(record.title.removesuffix(" overview"))
-            if not project_name or not f" {project_name} " in f" {normalized_question} ":
+            project_aliases = {
+                project_name,
+                *(normalize_text(keyword) for keyword in record.keywords if any(
+                    marker in normalize_text(keyword)
+                    for marker in ("poetic", "hiresense", "kaushik", "agri", "land bidding")
+                )),
+            }
+            if project_name.endswith(" ai"):
+                project_aliases.add(project_name[:-3].strip())
+            if not any(alias and f" {alias} " in f" {normalized_question} " for alias in project_aliases):
                 continue
-            link = record.links[0]
+            if "github" in normalized_question:
+                link = next((item for item in record.links if item.type == "github"), record.links[0])
+            elif "live demo" in normalized_question or "demo link" in normalized_question:
+                if project_name == "agri products":
+                    link = next((item for item in record.links if item.type == "github"), record.links[0])
+                    return AskAmanResponse(
+                        answer=(
+                            "The Agri-Products live demo is temporarily unavailable because its backend service is "
+                            "currently offline. You can still explore the project's source code and complete case "
+                            "study through its GitHub repository."
+                        ),
+                        sources=[SourceReference(title=record.title, section=record.source_section)],
+                        links=[PublicLink.model_validate(link)],
+                        suggestions=list(SUGGESTIONS["projects"].items),
+                        intent="projects",
+                    )
+                link = next((item for item in record.links if item.type == "live_demo"), record.links[0])
+            else:
+                link = record.links[0]
             answer = (
                 "You can download Poetic Pebbles directly from Google Play."
                 if link.type == "play_store" and project_name == "poetic pebbles"

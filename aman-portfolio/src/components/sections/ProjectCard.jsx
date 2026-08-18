@@ -35,8 +35,8 @@ function ProjectCard({ project, onOpen }) {
           {project.stack.map((technology) => <Tag className="project-tag" key={technology}>{technology}</Tag>)}
         </div>
         <div className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-3">
-          <button className="case-study-button" type="button" onClick={() => onOpen(project)}>View Case Study <ArrowIcon /></button>
-          <ProjectLinks links={project.links} />
+          <button className="case-study-button" type="button" onClick={() => onOpen(project)}>{project.id === 'kaushik-footprints' || project.id === 'land-bidding-platform' ? 'View Case Study' : 'Case Study'} <ArrowIcon /></button>
+          <ProjectLinks links={project.links} variant={project.id === 'land-bidding-platform' ? 'agri-card' : 'card'} />
         </div>
       </div>
     </article>

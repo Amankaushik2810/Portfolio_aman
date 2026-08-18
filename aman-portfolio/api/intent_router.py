@@ -78,6 +78,7 @@ DEFAULT_INTENT_SIGNALS: dict[str, IntentSignals] = {
 GREETING_PHRASES = ("hello", "hi", "hey", "good morning", "good afternoon", "good evening")
 BROAD_QUESTION_PHRASES = ("tell me everything", "everything about aman", "all about aman", "tell me all about aman")
 LINK_REQUEST_PHRASES = (
+    "link",
     "share the link",
     "share me the link",
     "give me the link",
@@ -88,6 +89,9 @@ LINK_REQUEST_PHRASES = (
     "where can i get it",
     "where is the app available",
     "google play",
+    "github link",
+    "live demo",
+    "demo link",
 )
 
 
@@ -113,7 +117,13 @@ def _knowledge_entities(records: Iterable[KnowledgeRecord]) -> dict[str, set[str
     entities = {"projects": set(), "experience": set()}
     for record in records:
         if record.category == "projects" and record.id.endswith("-overview"):
-            entities["projects"].add(_without_suffix(record.title, "overview"))
+            project_name = _without_suffix(record.title, "overview")
+            entities["projects"].add(project_name)
+            # Product names are often requested without a descriptor such as
+            # "AI". Keep the short name as a first-class, deterministic alias
+            # instead of relying on the LLM or a broad GitHub/contact match.
+            if project_name.casefold().endswith(" ai"):
+                entities["projects"].add(project_name[:-3].strip())
         elif record.category == "experience" and record.id.endswith("-role"):
             entities["experience"].add(record.title.rsplit(" at ", maxsplit=1)[-1])
             employer_match = re.search(r"at ([^,]+), a ([^.]+) company", record.content, re.IGNORECASE)

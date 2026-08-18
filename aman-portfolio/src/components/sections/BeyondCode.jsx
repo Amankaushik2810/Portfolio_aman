@@ -1,6 +1,7 @@
 import Container from '../layout/Container.jsx'
 import RevealOnScroll from '../common/RevealOnScroll.jsx'
 import SectionHeading from './SectionHeading.jsx'
+import '../../creative-note.css'
 
 function BeyondCode({ content }) {
   return (
@@ -15,10 +16,16 @@ function BeyondCode({ content }) {
 
           <RevealOnScroll delay={100}>
             <article className="poetry-card">
-              <svg className="poetry-quote-mark" aria-hidden="true" viewBox="0 0 120 90"><path d="M11 75c0-27 11-47 34-60l10 13c-11 8-17 16-18 25 15 0 25 8 25 21 0 12-8 20-20 20C19 94 11 87 11 75Zm54 0c0-27 11-47 34-60l10 13c-11 8-17 16-18 25 15 0 25 8 25 21 0 12-8 20-20 20-13 0-21-7-21-19Z" fill="currentColor"/></svg>
-              <p className="poetry-card-kicker">Poetic Pebbles / Creative note</p>
-              <p className="poetry-excerpt">{content.excerpt}</p>
-              <p className="poetry-excerpt-label">{content.excerptLabel}</p>
+              <header className="poetry-card-header">POETIC PEBBLES / CREATIVE NOTE</header>
+              <span className="poetry-card-quote-mark" aria-hidden="true">“</span>
+              <span className="poetry-card-sweep" aria-hidden="true" />
+              <blockquote className="poetry-excerpt">
+                <p>“Between <span className="poetry-word-cyan">logic</span> and <span className="poetry-word-violet">longing</span>,</p>
+                <p>I found a space to create—</p>
+                <p>where <span className="poetry-word-cyan">code</span> builds the path,</p>
+                <p>and <span className="poetry-word-violet">poetry</span> gives it meaning.”</p>
+                <footer className="poetry-attribution"><cite>— Aman Kaushik · Poetic Pebbles</cite></footer>
+              </blockquote>
             </article>
           </RevealOnScroll>
         </div>

@@ -3,7 +3,7 @@
     "id": "project-poetic-pebbles-overview",
     "category": "projects",
     "title": "Poetic Pebbles overview",
-    "content": "Poetic Pebbles is Aman's flagship published Android application. It is a poetry-sharing app that lets users write, publish, and explore poems while participating in a community through likes, comments, follows, profiles, and notifications. The app is available on Google Play.",
+    "content": "Poetic Pebbles is an Android community for readers and writers of poetry. It gives writers a focused place to submit poems and gives readers a way to discover approved poems, like work, comment and follow authors. The app is available on Google Play.",
     "keywords": ["Poetic Pebbles", "published Android application", "poetry-sharing app", "Google Play", "flagship project", "link", "app link", "download", "install", "Play Store", "Google Play", "Poetic Pebbles link"],
     "source_section": "projects",
     "links": [
@@ -16,91 +16,226 @@
     ]
   },
   {
-    "id": "project-poetic-pebbles-features",
+    "id": "project-poetic-pebbles-ownership-timeline",
     "category": "projects",
-    "title": "Poetic Pebbles features",
-    "content": "Poetic Pebbles includes authentication, poem publishing, likes and comments, follow and unfollow actions, user profiles, notifications, and an admin approval workflow. AI Search and Assistant is listed as under development.",
-    "keywords": ["Poetic Pebbles features", "authentication", "poem publishing", "likes", "comments", "profiles", "notifications", "admin approval", "AI Search and Assistant"],
+    "title": "Poetic Pebbles ownership and timeline",
+    "content": "Aman Kaushik is the solo developer of Poetic Pebbles. Development started in March 2025, and the Android app was published on Google Play in April 2025. The project is actively maintained.",
+    "keywords": ["Poetic Pebbles developer", "who developed Poetic Pebbles", "solo developer", "development started", "March 2025", "published", "launched", "April 2025", "actively maintained"],
     "source_section": "projects"
   },
   {
-    "id": "project-poetic-pebbles-technologies",
+    "id": "project-poetic-pebbles-architecture",
     "category": "projects",
-    "title": "Poetic Pebbles technologies",
-    "content": "Poetic Pebbles was built with Kotlin, XML, Firebase, and the Android SDK.",
-    "keywords": ["Poetic Pebbles technology", "Kotlin", "XML", "Firebase", "Android SDK"],
+    "title": "Poetic Pebbles Android architecture",
+    "content": "Poetic Pebbles uses a Firebase-backed Android architecture designed for secure access, moderated publishing and real-time community interaction. The Android application was developed using Kotlin and XML. Firebase supports authentication, real-time data synchronization, media storage and user notifications.",
+    "keywords": ["Poetic Pebbles architecture", "Kotlin", "XML", "Android SDK", "Firebase-backed", "real-time", "secure access", "moderated publishing"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-publishing-workflow",
+    "category": "projects",
+    "title": "Poetic Pebbles poem approval workflow",
+    "content": "After a signed-in author creates a poem, its information is stored in Firebase Realtime Database with a pending review status. The poem is not public immediately. The administrative application reviews it and approves or rejects it. Approved poems then become visible in the public feed, where readers can like, comment and follow authors.",
+    "keywords": ["Poetic Pebbles workflow", "poem approval", "moderation", "pending review", "submit poem", "approve", "reject", "public feed", "publishing workflow"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-administrative-application",
+    "category": "projects",
+    "title": "Poetic Pebbles administrative application",
+    "content": "The separate Poetic Pebbles administrative application provides centralized tools to review and approve or reject poems, ban or unban users, send broadcast notifications and create Instagram-ready posts. It supports content quality, community safety, communication and social-media content creation.",
+    "keywords": ["Poetic Pebbles admin", "administrative application", "admin panel", "moderation tools", "ban user", "unban user", "broadcast notification", "Instagram post creation"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-firebase-services",
+    "category": "projects",
+    "title": "Poetic Pebbles Firebase services",
+    "content": "Poetic Pebbles uses Firebase Authentication for sign-in and personalized access, Firebase Realtime Database for application data and publishing and engagement workflows, Firebase Storage for user profile pictures, and Firebase Cloud Messaging for like, follow and administrative broadcast notifications.",
+    "keywords": ["Poetic Pebbles Firebase", "Firebase Authentication", "Firebase Realtime Database", "Firebase Storage", "Firebase Cloud Messaging", "FCM", "profile pictures", "notifications"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-challenges",
+    "category": "projects",
+    "title": "Poetic Pebbles development challenges",
+    "content": "Key Poetic Pebbles challenges included implementing useful, correctly targeted real-time notifications for likes, new followers and administrative broadcasts; preventing duplicate likes and follow relationships with validation and state checks; keeping Firebase database, storage, network and notification usage practical and cost-conscious; and preparing, testing and publishing the signed Android build on Google Play.",
+    "keywords": ["Poetic Pebbles challenges", "real-time notifications", "duplicate likes", "duplicate follows", "Firebase cost", "Firebase usage", "Google Play publishing", "Android release"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-lessons-learned",
+    "category": "projects",
+    "title": "Poetic Pebbles lessons learned",
+    "content": "Building Poetic Pebbles reinforced that a product requires connected authentication, publishing, moderation, engagement, notifications, administration and release management. It also highlighted the importance of modelling data relationships around behaviour, treating moderation and useful notifications as core product features, planning for Firebase cost during design, learning from user feedback and continuously evolving a published product.",
+    "keywords": ["Poetic Pebbles lessons", "lessons learned", "product development", "data relationships", "moderation", "notifications", "cost awareness", "user feedback", "continuous evolution"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-community-impact",
+    "category": "projects",
+    "title": "Poetic Pebbles community impact",
+    "content": "Since its April 2025 Google Play release, Poetic Pebbles has reached more than 150 users/downloads and contains more than 100 poems. It remains actively maintained, with improvements and new functionality influenced by user suggestions.",
+    "keywords": ["Poetic Pebbles users", "downloads", "community size", "150 users", "150 downloads", "100 poems", "community impact", "actively maintained"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-instagram-community",
+    "category": "projects",
+    "title": "Poetic Pebbles Instagram community",
+    "content": "Aman also created an Instagram presence for Poetic Pebbles, where selected poems submitted by users are published and promoted. This extends the community beyond the Android app and helps its writing reach a broader audience.",
+    "keywords": ["Poetic Pebbles Instagram", "Instagram community", "social media", "promoted poems", "selected poems", "broader audience"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-poetic-pebbles-ai-roadmap",
+    "category": "projects",
+    "title": "Poetic Pebbles AI roadmap",
+    "content": "Poetic Pebbles AI is in development and is not currently live in the production Android application. It is planned as a RAG-based assistant that will let users ask natural-language questions about the app, its features, poems and authors.",
+    "keywords": ["Poetic Pebbles AI", "AI assistant", "RAG", "roadmap", "in development", "not live", "future feature", "questions about poems", "questions about authors"],
     "source_section": "projects"
   },
   {
     "id": "project-hiresense-ai-overview",
     "category": "projects",
     "title": "HireSense AI overview",
-    "content": "HireSense AI is an AI recruitment analysis tool. It analyses resumes and job descriptions to support candidate shortlisting, question generation, and retrieval workflows.",
-    "keywords": ["HireSense AI", "AI recruitment", "resume analysis", "job description analysis", "candidate shortlisting", "retrieval"],
+    "content": "HireSense AI is a local, privacy-oriented recruitment-support prototype independently designed and developed by Aman Kaushik. It combines machine learning, NLP, retrieval-augmented generation and a local LLM to help recruiters screen resumes, explore candidate information, compare resumes with job requirements and prepare focused interviews. It is advisory and does not make final hiring decisions.",
+    "keywords": ["HireSense AI", "AI recruitment", "recruitment-support prototype", "resume analysis", "candidate shortlisting", "advisory", "final hiring decisions"],
+    "source_section": "projects",
+    "links": [{"id": "hiresense-ai-github", "label": "View HireSense AI on GitHub", "url": "https://github.com/Amankaushik2810/HireSense-AI", "type": "github"}]
+  },
+  {
+    "id": "project-hiresense-ai-timeline-status",
+    "category": "projects",
+    "title": "HireSense AI timeline and status",
+    "content": "Aman started HireSense AI in April 2026. It currently runs locally through a Streamlit interface and Ollama, is actively improving, and deployment is being prepared. It is not currently presented as a deployed or production-ready application.",
+    "keywords": ["HireSense AI timeline", "April 2026", "when developed", "started", "local", "runs locally", "deployed", "deployment", "actively improving", "status"],
     "source_section": "projects"
   },
   {
-    "id": "project-hiresense-ai-features",
+    "id": "project-hiresense-ai-input-modes",
     "category": "projects",
-    "title": "HireSense AI features",
-    "content": "HireSense AI supports resume and job-description analysis, candidate shortlisting, match scoring, Random Forest classification, technical and behavioural question generation, and RAG-based candidate retrieval.",
-    "keywords": ["HireSense AI features", "match score", "Random Forest", "technical questions", "behavioural questions", "RAG-based candidate retrieval"],
+    "title": "HireSense AI resume input modes",
+    "content": "HireSense AI supports three input modes: the included CSV candidate dataset, uploaded text-based PDF resumes, and manually entered or pasted resume text. The PDF flow supports text-based PDFs; it is not presented as OCR support for scanned resumes.",
+    "keywords": ["HireSense AI inputs", "CSV", "candidate dataset", "PDF resume", "text-based PDF", "manual resume text", "pasted resume", "OCR"],
     "source_section": "projects"
   },
   {
-    "id": "project-hiresense-ai-technologies",
-    "category": "projects",
-    "title": "HireSense AI technologies",
-    "content": "HireSense AI uses Python, Streamlit, scikit-learn, NLP, and Ollama.",
-    "keywords": ["HireSense AI technology", "Python", "Streamlit", "scikit-learn", "NLP", "Ollama"],
-    "source_section": "projects"
+    "id": "project-hiresense-ai-preprocessing", "category": "projects", "title": "HireSense AI resume preprocessing", "content": "A shared preprocessing pipeline cleans and normalizes resume text, removes duplicate records, handles missing values, calculates resume length, derives experience level, and extracts candidate name, skills, education and experience. It creates a consistent representation for different input modes.", "keywords": ["HireSense AI preprocessing", "clean text", "normalize", "duplicates", "missing values", "resume length", "experience level", "skills extraction", "education extraction"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-classification", "category": "projects", "title": "HireSense AI ML classification", "content": "HireSense AI uses a Random Forest Classifier as its primary shortlist classifier, with Logistic Regression as a baseline. On the 64-candidate held-out test set (32 shortlisted and 32 not shortlisted), Random Forest achieved 96.88% accuracy, 100.00% precision, 93.75% recall and 96.77% F1. It made 62 correct predictions, with 30 true positives, 32 true negatives, 0 false positives and 2 false negatives. Five-fold cross-validation F1 was 99.68%. Logistic Regression achieved 95.31% accuracy, 100.00% precision, 90.62% recall and 95.08% F1. These are prototype metrics from a small balanced dataset, not production hiring accuracy.", "keywords": ["HireSense AI classifier", "Random Forest Classifier", "Logistic Regression", "shortlist classifier", "96.88% accuracy", "100% precision", "93.75% recall", "96.77% F1", "99.68% cross-validation", "64 test candidates", "62 correct predictions", "false positives", "false negatives", "model evaluation"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-match-score-status", "category": "projects", "title": "HireSense AI match-score model status", "content": "The match-score regression pipeline is functional, but re-evaluation is required. Its latest feature list still includes shortlist status as an input when predicting match score. Because shortlist status is strongly related to match score, current regression results may be inflated. The feature must be removed, both regressors retrained, and new R², MAE and RMSE values generated before regression performance is presented as verified. Target-leakage correction is required; it is not fixed.", "keywords": ["HireSense AI regression", "match score", "target leakage", "shortlist-label leakage", "not fixed", "re-evaluation required", "retraining", "unverified regression metrics"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-nlp-analysis", "category": "projects", "title": "HireSense AI NLP and TF-IDF analysis", "content": "HireSense AI applies TF-IDF keyword analysis and skill-frequency analysis to candidate resumes. Candidate information is represented in a knowledge base and vectorized with TF-IDF for retrieval-oriented search.", "keywords": ["HireSense AI NLP", "TF-IDF", "keyword analysis", "skill frequency", "candidate knowledge base", "vectorization"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-rag-retrieval", "category": "projects", "title": "HireSense AI top-five RAG retrieval", "content": "For a natural-language recruiter query, HireSense AI uses TF-IDF vectorization and cosine similarity to retrieve the five most relevant candidate resumes. This lightweight RAG workflow helps recruiters search candidate information conversationally instead of manually filtering spreadsheet columns.", "keywords": ["HireSense AI RAG", "RAG search", "cosine similarity", "top five", "five candidates", "retrieval", "natural-language recruiter query"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-local-llm", "category": "projects", "title": "HireSense AI local Llama 3.2 workflow", "content": "HireSense AI runs Llama 3.2 locally through Ollama. Local LLM assistance supports professional resume summaries, job-description generation, resume-to-job match analysis, targeted interview questions and an advisory final recommendation. Local execution keeps resume content on the local machine during LLM processing, while speed depends on hardware and Ollama availability.", "keywords": ["HireSense AI Ollama", "Llama 3.2", "local LLM", "resume summary", "job description", "match analysis", "advisory recommendation", "privacy"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-streamlit-dashboard", "category": "projects", "title": "HireSense AI Streamlit dashboard", "content": "The Python Streamlit application exposes a dashboard, resume screening, RAG search, candidate insights and model-evaluation views. It is currently a local application and deployment preparation is in progress.", "keywords": ["HireSense AI Streamlit", "Python", "dashboard", "resume screening", "candidate insights", "model evaluation", "local application"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-interview-threshold", "category": "projects", "title": "HireSense AI interview-question threshold", "content": "HireSense AI generates interview questions only when the resume-to-job match score is above 75%. The questions and final recommendation are advisory and require recruiter review.", "keywords": ["HireSense AI interview questions", "75%", "match score above 75", "threshold", "recruiter review", "advisory"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-challenges", "category": "projects", "title": "HireSense AI development challenges", "content": "Key challenges include normalizing CSV, text-based PDF and manual resume inputs; extracting information from varied resumes without claiming OCR; connecting structured ML, unstructured LLM analysis and RAG; validating structured LLM JSON output; handling local Ollama availability and delays; preventing misleading regression leakage; working with a small balanced dataset; and protecting sensitive resume information.", "keywords": ["HireSense AI challenges", "resume inputs", "PDF", "structured LLM output", "timeout", "target leakage", "small dataset", "sensitive resume information"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-lessons", "category": "projects", "title": "HireSense AI lessons learned", "content": "HireSense AI reinforced that leakage checks and decision-time feature availability matter before reporting performance; metrics need dataset context; TF-IDF RAG can improve access to structured data; local LLMs trade privacy benefits for operational handling; shared preprocessing supports consistency; generated output needs validation; human oversight is essential; and production readiness requires testing, privacy controls, monitoring and reliable failure handling.", "keywords": ["HireSense AI lessons", "data leakage", "classification metrics", "RAG", "local LLM", "input consistency", "JSON validation", "human oversight", "production readiness"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-responsible-ai", "category": "projects", "title": "HireSense AI responsible-AI limitations", "content": "HireSense AI is not an autonomous hiring system. Predictions, match scores and recommendations should not be used as the sole basis for employment decisions. The 320-record dataset is balanced with 160 shortlisted and 160 not shortlisted candidates across five technical roles, but it is small and structurally similar, so prototype evaluation does not represent production hiring accuracy. Real deployment would require diverse lawfully collected anonymized data, bias and fairness evaluation, explainability, auditability and human review.", "keywords": ["HireSense AI responsible AI", "autonomous hiring", "human oversight", "320 candidates", "160 shortlisted", "160 not shortlisted", "five technical roles", "production hiring accuracy", "bias", "fairness", "auditability"], "source_section": "projects"
+  },
+  {
+    "id": "project-hiresense-ai-improvement-roadmap", "category": "projects", "title": "HireSense AI current improvement roadmap", "content": "Completed improvements are LLM timeout and retry handling, explicit unknown-category handling, and removal of the duplicate candidate-preview section. In progress are regression leakage correction, match-score retraining and re-evaluation, expanded automated tests, deployment preparation, dependency reproducibility and production security improvements, evaluation with more diverse data, and appropriate bias, fairness and auditability checks.", "keywords": ["HireSense AI roadmap", "completed improvements", "timeout retry fixed", "unknown category fixed", "duplicate preview fixed", "tests in progress", "deployment in progress", "fairness", "auditability"], "source_section": "projects"
   },
   {
     "id": "project-kaushik-footprints-overview",
     "category": "projects",
-    "title": "Kaushik Footprints overview",
-    "content": "Kaushik Footprints is a full-stack e-commerce application with customer shopping flows and administration tools for inventory management.",
-    "keywords": ["Kaushik Footprints", "e-commerce", "full-stack", "shopping", "inventory management"],
-    "source_section": "projects"
+    "title": "Kaushik’s Footprints overview",
+    "content": "Kaushik’s Footprints is a full-stack fashion and lifestyle e-commerce application. It connects a React customer storefront and separate React admin interface through a Node.js and Express REST API with persistent MongoDB data. The verified current scope includes storefront browsing, categories, product details, JWT-based authentication, user-specific cart operations, product-image upload and catalogue management. It does not claim completed live payments or complete order persistence.",
+    "keywords": ["Kaushik Footprints", "Kaushik’s Footprints", "fashion e-commerce project", "MERN e-commerce project", "Aman’s e-commerce project", "shopping website project", "full-stack", "React", "Express", "MongoDB"],
+    "source_section": "projects",
+    "links": [{"id": "kaushik-footprints-github", "label": "View Kaushik’s Footprints on GitHub", "url": "https://github.com/Amankaushik2810/Kaushik-s-Footprints", "type": "github"}]
   },
   {
     "id": "project-kaushik-footprints-features",
     "category": "projects",
-    "title": "Kaushik Footprints features",
-    "content": "Kaushik Footprints includes authentication, admin inventory management, product browsing, checkout, address management, and payment options.",
-    "keywords": ["Kaushik Footprints features", "authentication", "admin", "inventory", "product browsing", "checkout", "address management", "payment options"],
+    "title": "Kaushik’s Footprints implemented features",
+    "content": "Kaushik’s Footprints supports product discovery, men/women/kids category browsing, product-detail pages with image/category/pricing information, signup and login, JWT-based authenticated requests, user-specific cart data persisted in MongoDB, cart quantity and amount calculation, and a separate admin interface to add, list and remove products and upload product images. Checkout is the next stage of the user journey; live payments are not presented as implemented.",
+    "keywords": ["Kaushik Footprints features", "product browsing", "categories", "product details", "JWT", "persistent cart", "MongoDB cart", "admin", "add product", "remove product", "upload product images", "live payments", "checkout"],
     "source_section": "projects"
   },
   {
     "id": "project-kaushik-footprints-technologies",
     "category": "projects",
-    "title": "Kaushik Footprints technologies",
-    "content": "Kaushik Footprints was built with React, Node.js, Express, and MongoDB.",
-    "keywords": ["Kaushik Footprints technology", "React", "Node.js", "Express", "MongoDB"],
+    "title": "Kaushik’s Footprints architecture and technologies",
+    "content": "Kaushik’s Footprints uses React for customer and admin interfaces, Node.js and Express for REST API endpoints, MongoDB for products/users/user-specific cart data, JWT for token-based authenticated requests, and Multer for product-image uploads. The storefront and admin panel use the same Express API and MongoDB product collection. The customer frontend requests product, authentication and cart data; the admin panel uploads images and manages catalogue products, which become available in the storefront through the backend API.",
+    "keywords": ["Kaushik Footprints architecture", "React", "Node.js", "Express", "MongoDB", "REST API", "JWT authentication", "Multer", "admin panel", "customer storefront"],
     "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-challenges", "category": "projects", "title": "Kaushik’s Footprints development challenges", "content": "Key Kaushik’s Footprints challenges included keeping storefront, admin and backend API contracts consistent; managing CORS across local development ports; persisting an independent authenticated cart for each user; attaching and verifying JWTs for protected cart operations; handling multipart image uploads and accessible image paths; synchronising admin catalogue changes with storefront product APIs; and separating customer/admin modules. Production preparation is next-stage engineering and would require environment configuration, secrets, password hashing, restricted admin endpoints, upload validation, production CORS and complete checkout handling.", "keywords": ["Kaushik Footprints challenges", "CORS", "local ports", "JWT", "cart persistence", "Multer", "image upload", "catalogue synchronisation", "production preparation"], "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-lessons", "category": "projects", "title": "Kaushik’s Footprints lessons learned", "content": "Kaushik’s Footprints reinforced that full-stack features require coordinated frontend state, API behaviour, database models and error handling; persistent cart state requires authentication and synchronisation; JWTs must be attached and verified consistently; images need multipart upload, storage and delivery workflows; shared APIs benefit separate customer/admin interfaces; and modular routes, components, services and models improve maintainability. Production readiness also requires validation, testing, monitoring, secret management and reliable deployment configuration.", "keywords": ["Kaushik Footprints lessons", "full stack", "persistent state", "JWT", "media upload", "shared API", "modular architecture", "production readiness"], "source_section": "projects"
+  },
+  {
+    "id": "project-kaushik-footprints-future", "category": "projects", "title": "Kaushik’s Footprints future improvements", "content": "Future improvements—not current features—include complete order persistence, a production-ready payment gateway, admin order management, search/sorting/filtering, inventory tracking, wishlist and order history, verified promo codes, image validation, environment-based configuration, password hashing, role-based admin authorization, automated tests, and production deployment of the storefront, admin panel, backend and database.", "keywords": ["Kaushik Footprints future", "payments", "order persistence", "inventory", "wishlist", "promo code", "role based authorization", "tests", "deployment"], "source_section": "projects"
   },
   {
     "id": "project-land-bidding-platform-overview",
     "category": "projects",
-    "title": "Land Bidding Platform overview",
-    "content": "The Land Bidding Platform is a full-stack MERN web application and property marketplace. It combines land listings, live bidding, chat, and account-management workflows.",
-    "keywords": ["Land Bidding Platform", "MERN", "property marketplace", "land listings", "live bidding", "chat"],
-    "source_section": "projects"
+    "title": "Agri-Products overview",
+    "content": "Agri-Products is a full-stack agricultural marketplace prototype. It connects agricultural land and product listings, time-bound bidding, user accounts, search, bid tracking and real-time buyer-seller communication. Its frontend deployment target is Netlify, its backend deployment target is Render, and data is stored in MongoDB Atlas. The public demo is temporarily unavailable because the backend deployment is currently offline. The live demo can be restored after the backend has been fixed and redeployed.",
+    "keywords": ["Agri-Products", "Agri Products", "land bidding platform", "agricultural auction platform", "agriculture marketplace", "Aman agricultural project", "Agri Products link", "GitHub link", "live demo"],
+    "source_section": "projects",
+    "links": [
+      {
+        "id": "agri-products-github",
+        "label": "View Agri-Products on GitHub",
+        "url": "https://github.com/Amankaushik2810/Agri-Products",
+        "type": "github"
+      }
+    ]
   },
   {
     "id": "project-land-bidding-platform-features",
     "category": "projects",
-    "title": "Land Bidding Platform features",
-    "content": "The Land Bidding Platform includes user authentication and authorization, an admin dashboard and property management, land and property listing and browsing, property details with images and pricing, real-time land bidding, live bid tracking and history, real-time buyer-seller chat, user profile and account management, search and filtering, and a secure bidding and transaction workflow.",
-    "keywords": ["Land Bidding Platform features", "authentication", "admin dashboard", "property management", "real-time bidding", "bid history", "real-time chat", "search and filter"],
+    "title": "Agri-Products features and workflow",
+    "content": "Agri-Products supports email/password registration, Google sign-in integration, bcrypt password hashing, one-hour JWT authentication, password-reset email flow, land and agricultural-product listings, multiple-image uploads, paginated product browsing, land and product bid records, land search by location and type, My Listings, My Bids, My Wins, user profiles, Socket.IO chat and persisted messages. A node-cron task processes expired ongoing land auctions every minute, identifies the highest valid bid, updates the land-auction result and generates a PDF winner certificate with PDFKit. Product-auction winner automation is not claimed as implemented.",
+    "keywords": ["Agri-Products features", "agricultural product listings", "land listings", "land bidding", "product bidding", "Socket.IO chat", "auction certificate", "search", "My Bids", "My Wins"],
     "source_section": "projects"
   },
   {
     "id": "project-land-bidding-platform-technologies",
     "category": "projects",
-    "title": "Land Bidding Platform technologies",
-    "content": "The Land Bidding Platform was built with React, Node.js, Express.js, and MongoDB.",
-    "keywords": ["Land Bidding Platform technology", "React", "Node.js", "Express.js", "MongoDB"],
+    "title": "Agri-Products architecture and technologies",
+    "content": "Agri-Products uses React 19, React Router, Context API, Axios and Socket.IO Client in the frontend. Its backend uses Node.js, Express, MongoDB with Mongoose, Socket.IO, JSON Web Tokens, bcrypt, Multer, Nodemailer, node-cron, PDFKit, CORS and dotenv. The application is a modular client-server architecture, not microservices. The backend separates routes, controllers, models, middleware and utilities. Socket.IO authenticates socket connections with the user token and chat messages are stored in MongoDB before being emitted to the recipient's socket room.",
+    "keywords": ["Agri-Products architecture", "React", "Node.js", "Express", "MongoDB Atlas", "Socket.IO", "JWT", "Mongoose", "Multer", "node-cron", "PDFKit"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-agri-products-challenges-status",
+    "category": "projects",
+    "title": "Agri-Products engineering status and challenges",
+    "content": "Agri-Products is a full-stack prototype undergoing production hardening. Its public demo is temporarily unavailable because the backend deployment is currently offline. The production roadmap includes resolving merge-conflict markers, centralising API URLs in environment configuration, enforcing token-blacklist checks in authentication middleware, server-side Google credential verification, protected chat-history endpoints, consistent server-side bid validation, atomic conditional bid updates or transactions, expanded secured admin APIs, upload validation, durable cloud storage, rate limiting, structured validation, automated tests, monitoring and retry-safe scheduled processing. Concurrent bidding needs atomic updates or optimistic concurrency control so stale or simultaneous bids cannot overwrite one another.",
+    "keywords": ["Agri-Products status", "production readiness", "concurrent bidding", "race condition", "token blacklist", "admin security", "production hardening", "challenges"],
+    "source_section": "projects"
+  },
+  {
+    "id": "project-agri-products-future",
+    "category": "projects",
+    "title": "Agri-Products future enhancements",
+    "content": "Future improvements for Agri-Products, not current features, include payment integration with Razorpay or Stripe, auction and market analytics, price forecasting, personalised recommendations, regional-language support, map-based discovery, seller KYC, ratings and reviews, mobile applications, push notifications, expanded admin management, cloud object storage and transaction-safe concurrent bidding.",
+    "keywords": ["Agri-Products future", "payments", "Razorpay", "Stripe", "analytics", "forecasting", "recommendations", "KYC", "mobile app"],
     "source_section": "projects"
   }
 ]

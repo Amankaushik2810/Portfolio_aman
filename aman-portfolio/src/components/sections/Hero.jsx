@@ -7,7 +7,7 @@ import CredibilityStrip from './CredibilityStrip.jsx'
 import amanPortrait from '../../assets/images/aman_pic.png'
 
 function Hero({ profile }) {
-  const resumeIsReady = profile.contact.resumeUrl && !profile.contact.resumeUrl.startsWith('REPLACE_WITH')
+  const resumeUrl = `${import.meta.env.BASE_URL}resume/AmanKaushik_CV.pdf`
 
   return (<>
     <section className="hero-section" id="home" aria-labelledby="hero-name">
@@ -40,7 +40,7 @@ function Hero({ profile }) {
           </div>
           <div className="hero-actions mt-2 flex gap-3 animate-fade-up" style={{ '--delay': '440ms' }}>
             <PrimaryButton className="flex-1" href="#projects">{profile.heroActions.primary}</PrimaryButton>
-            {resumeIsReady ? <SecondaryButton className="flex-1" href={profile.contact.resumeUrl} target="_blank" rel="noreferrer">{profile.heroActions.secondary}</SecondaryButton> : <SecondaryButton className="flex-1" aria-disabled="true" title="Add a resume URL in src/data/profile.js to enable this button">{profile.heroActions.secondary}</SecondaryButton>}
+            <SecondaryButton className="flex-1" href={resumeUrl} download="AmanKaushik_CV.pdf" aria-label="Download Aman Kaushik's resume as a PDF">{profile.heroActions.secondary}</SecondaryButton>
           </div>
           <div className="hero-socials mt-6 animate-fade-in" style={{ '--delay': '540ms' }}><SocialLinks contact={profile.contact} /></div>
         </div>

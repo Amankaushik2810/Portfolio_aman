@@ -7,7 +7,7 @@ from urllib.parse import urlparse
 
 
 APPROVED_EXTERNAL_DOMAINS = frozenset({"play.google.com", "github.com", "linkedin.com"})
-SUPPORTED_LINK_TYPES = frozenset({"play_store", "github", "linkedin"})
+SUPPORTED_LINK_TYPES = frozenset({"play_store", "github", "linkedin", "live_demo"})
 _LINK_ID_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 

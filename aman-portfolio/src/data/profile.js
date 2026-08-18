@@ -48,8 +48,6 @@ const profile = {
     story: 'I created Poetic Pebbles to bring a thoughtful publishing and sharing experience to poetry lovers.',
     pullQuote: 'Poetry gives emotions a voice. Technology gives ideas scale. Poetic Pebbles is my attempt to bring both together.',
     technologyLine: 'Android • Kotlin • Firebase • AI • RAG • LLM',
-    excerpt: 'REPLACE_WITH_ORIGINAL_POETRY_EXCERPT',
-    excerptLabel: 'Original placeholder excerpt — replace with Aman’s writing',
   },
   contactContent: {
     eyebrow: 'Contact',

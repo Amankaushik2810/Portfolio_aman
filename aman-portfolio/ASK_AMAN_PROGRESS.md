@@ -214,6 +214,23 @@ The knowledge base contains 41 focused retrieval records across seven JSON files
 - Regenerated and validated `rag_data/vectors.json` after the project record change: 41 synchronized vectors at dimension 3072 using `gemini-embedding-001`.
 - Added `tests/test_project_links.py` plus router/frontend regression coverage. Final validation: 41 Python tests passed; knowledge and index validation passed; lint and production build passed (63 modules).
 
+## Poetic Pebbles case study
+
+- Replaced the Poetic Pebbles case-study placeholders with a dedicated responsive React component, `src/components/sections/PoeticPebblesCaseStudy.jsx`. It keeps the existing modal's close button, Escape key handling, backdrop close, focus return and background-scroll lock intact.
+- The case study includes the supplied project summary and compact stat cards (solo developer, March 2025 start, April 2025 Google Play publication, 150+ users/downloads, 100+ poems and active maintenance), detailed Problem and Solution sections, four challenge cards, and eight lessons-learned cards.
+- `ProjectArchitecture.jsx` now renders the Poetic Pebbles Firebase workflow as numbered, icon-supported nodes with a structured desktop grid and a connected mobile timeline. It includes Firebase Authentication, Realtime Database, Storage, Cloud Messaging and the administrative application. Poetic Pebbles AI is visually separated, marked **In development**, and explicitly described as not currently live in the production Android application.
+- The existing logo is reused. The new case-study elements use Tailwind-only warm orange, soft cream and muted green accents, restrained transform/opacity-safe hover effects, and existing dark-mode styling. No animation dependency was added.
+- Updated the visible project action to the verified Play Store URL and label: `Download on Google Play ↗`, with the existing safe new-tab attributes retained.
+
+## Poetic Pebbles knowledge and verification
+
+- Replaced the former three broad Poetic Pebbles records with 11 focused project records: overview; ownership and timeline; architecture; poem-approval workflow; administrative application; Firebase services; challenges; lessons learned; community impact; Instagram community; and Poetic Pebbles AI roadmap. The structured verified Play Store link remains on the overview record.
+- The knowledge base now has 49 records across seven files. `python scripts/validate_rag_data.py` passed.
+- Regenerated `rag_data/vectors.json` with `gemini-embedding-001`: 49 synchronized vectors at dimension 3072. `python scripts/build_index.py --validate` passed.
+- Added `tests/test_poetic_pebbles_case_study.py` and updated the knowledge-count expectations. `python -m unittest discover -s tests -v` passed: 44 tests. `npm run lint` passed and `npm run build` passed (64 modules transformed).
+- Current-code local FastAPI checks returned grounded answers and sources for all requested Poetic Pebbles questions. The AI-live answer explicitly states that Poetic Pebbles AI is in development and not live in the production Android application. The download question returned the deterministic verified Google Play link without Gemini generation.
+- A pre-existing local process on port 8000 was found to be serving stale project records, so it was not used as evidence. The current workspace was verified on an isolated port and through in-process FastAPI checks. Background sandbox processes cannot make provider calls in this environment; the allowed in-process check successfully completed the provider-backed validations.
+
 ## Next implementation step
 
 Optionally run `python scripts/smoke_ask_aman.py --live` against a locally served endpoint to verify one real grounded answer with the server-side key, then deploy the static site and Vercel Python Function together.

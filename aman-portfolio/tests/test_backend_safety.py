@@ -83,7 +83,7 @@ class FakeRagService:
 class KnowledgeValidationTests(unittest.TestCase):
     def test_current_knowledge_files_load(self):
         knowledge_base = load_knowledge_base()
-        self.assertEqual(len(knowledge_base.records), 41)
+        self.assertEqual(len(knowledge_base.records), 66)
         self.assertEqual(set(knowledge_base.category_counts), set(KNOWLEDGE_FILES))
 
     def test_duplicate_record_ids_are_rejected(self):
@@ -234,7 +234,7 @@ class PromptAndEndpointSafetyTests(unittest.TestCase):
         self.assertEqual(payload["configuration"]["generation_model"], "gemini-3.1-flash-lite")
         self.assertEqual(payload["configuration"]["embedding_model"], "gemini-embedding-001")
         self.assertTrue(payload["index"]["loaded"])
-        self.assertEqual(payload["index"]["record_count"], 41)
+        self.assertEqual(payload["index"]["record_count"], len(load_knowledge_base().records))
         self.assertEqual(payload["index"]["embedding_dimension"], 3072)
 
 

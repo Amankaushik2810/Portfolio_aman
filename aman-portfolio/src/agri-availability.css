@@ -1,0 +1,69 @@
+.ag-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1.2rem;
+}
+
+.ag-hero-badges span {
+  border: 1px solid rgb(134 239 172 / 24%);
+  border-radius: 999px;
+  background: rgb(74 222 128 / 8%);
+  padding: .32rem .55rem;
+  color: #BBF7D0;
+  font-size: .76rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.ag-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.12);
+  padding: .3rem .55rem;
+  color: #FCD34D;
+  font-size: .76rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.ag-status-badge > span {
+  width: .42rem;
+  height: .42rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #F59E0B;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.12);
+}
+
+.ag-deployment-note {
+  max-width: 68ch;
+  margin-top: 1rem;
+  border-left: 2px solid rgba(245, 158, 11, 0.55);
+  padding-left: .7rem;
+  color: #A3B8A8 !important;
+  font-size: .84rem !important;
+  line-height: 1.55 !important;
+}
+
+.ag-deployment-note b,
+.ag-deployment-architecture b { color: #F8FAF7; }
+
+.ag-deployment-architecture {
+  display: grid;
+  gap: .65rem;
+  margin-top: 1.1rem;
+}
+
+.ag-deployment-architecture li {
+  border: 1px solid rgb(134 239 172 / 20%);
+  border-left: 3px solid #F4B942;
+  border-radius: .7rem;
+  background: #10291B;
+  padding: .7rem .8rem .7rem 1.5rem;
+}
+
+.ag-deployment-architecture li::before { color: #F4B942; }
